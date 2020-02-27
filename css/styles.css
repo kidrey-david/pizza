@@ -1,1 +1,10 @@
-,
+header {
+  background-image: url("../image/header.jpeg"); height: 700px;
+  background-size: cover;
+  text-align: center;
+  background-attachment: fixed;
+}
+.top {
+  color: black;
+  padding-top: 50px;
+}
