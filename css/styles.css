@@ -3,8 +3,22 @@ header {
   background-size: cover;
   text-align: center;
   background-attachment: fixed;
+  margin-bottom: 50px;
 }
 .top {
   color: black;
   padding-top: 50px;
+  font-weight: bolder;
+}
+.mouseClick{
+	cursor: pointer;
+  padding-top: 140px;
+  font-weight: bolder;
+  color: blue;
+}
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-style: italic;
 }
