@@ -22,3 +22,6 @@ body {
   text-align: center;
   font-style: italic;
 }
+.container {
+  margin-bottom: 50px;
+}

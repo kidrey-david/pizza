@@ -25,8 +25,8 @@
           <p>ORDER NOW AT AFFORDABLE PRICES AND ENJOY ONE OF THE BEST PIZZAS IN THE UNIVERSE</p>
         </div>
         <div class="mouseClick">
-            <h1>CLICK HERE TO ORDER NOW!</h2>
-            <a href="#about"><img src="image/mouse_click.png" alt="mouseclick" id="mouse"></a>
+            <h1>CLICK HERE TO SEE THE OUR MENU</h2>
+            <a href="#menu"><img src="image/mouse_click.png" alt="mouseclick" id="mouse"></a>
           </div>
     </header>    
 </head>
@@ -37,7 +37,7 @@
     <p>Here are some of the pizzas available in our Palace!</p>
     </div>
     <div class="container" >
-      <div class="heading"><h1>MENU</h1></div>
+      <div class="heading" id="menu"><h1>MENU</h1></div>
       <div class="container">
           <div class="row">
               <div class="col-md-12">
@@ -49,8 +49,9 @@
                                       <img src="image/bbq-steak.jpg" class="img-fluid">
                                   </div>
                                   <div class="overlay1">
+                                    <p>Barbeque Steak Pizza</p>
                                       <div class="mask flex-center  rgba-blue-light">
-                                          <p class="text-white" > Barbeque Steak Pizza</p>
+                                          <p class="text-white" > Barbeque Steak</p>
                                       </div>
                                   </div>
                               </div>
@@ -60,6 +61,8 @@
                                   <div class="image-frame">
                                       <img src="image/butter-chicken.jpg" class="img-fluid">
                                   </div>
+                                  <div class="overlay1">
+                                    <p>Butter Chicken Pizza </p>
                                   <div class="mask flex-center  rgba-blue-light">
                                       <p class="text-white" > Butter Chicken </p>
                                   </div>
@@ -71,6 +74,7 @@
                                       <img src="image/cheese.png" class="img-fluid">
                                   </div>
                                   <div class="overlay1">
+                                    <p>Cheese Pizza</p>
                                       <div class="mask flex-center  rgba-blue-light">                       
                                         <p class="text-white"> cheese </p>
                                       </div>
@@ -83,6 +87,7 @@
                                       <img src="image/deluxe.jpeg" class="img-fluid">
                                   </div>
                                   <div class="overlay1">
+                                    <p>Meat Deluxe Pizza </p>
                                       <div class="mask flex-center  rgba-blue-light">
                                         <p>Meat Deluxe </p>
                                       </div>
@@ -96,6 +101,7 @@
                                           <img src="image/hawaiian.jpeg" class="img-fluid">
                                       </div>
                                       <div class="overlay1">
+                                        <p>Hawaiian Pizza</p>
                                           <div class="mask flex-center  rgba-blue-light">
                                             <p> hawaiian </p>
                                           </div>
@@ -108,6 +114,7 @@
                                           <img src="image/pepperbbq.jpeg" class="img-fluid">
                                       </div>
                                       <div class="overlay1">
+                                        <p>Pepperoni Barbeque Pizza</p>
                                           <div class="mask flex-center  rgba-blue-light">
                                             <p> Pepperoni barbeque </p>
                                           </div>
@@ -120,6 +127,7 @@
                                           <img src="image/Pepperoni.jpg" class="img-fluid">
                                       </div>
                                       <div class="overlay1">
+                                        <p>Pepperoni Pizza</p>
                                           <div class="mask flex-center  rgba-blue-light">
                                             <p> Pepperoni </p>
                                           </div>
@@ -132,6 +140,7 @@
                                           <img src="image/regina.webp" class="img-fluid">
                                       </div>
                                       <div class="overlay1">
+                                        <p>Regina Pizza</p>
                                           <div class="mask flex-center  rgba-blue-light">
                                             <p> Regina </p>
                                           </div>
@@ -143,6 +152,62 @@
               </div>
           </div>
       </div>
+      <h2>Ready to place your order? <a href="#order">Click here</a></h2>
+  </div>
+  <div class="container" id="order">
+    <h1>Place an Order</h1>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <h2>First Order:</h2>
+        <form id="new-contact">
+          <div class="form-group">
+            <label for="new-first-name">Pizza Type</label>
+            <input type="text" class="form-control" id="new-first-name">
+          </div>
+          <div class="form-group">
+            <label for="new-last-name">Size</label>
+            <input type="text" class="form-control" id="new-last-name">
+          </div>
+
+          <div id="new-addresses">
+            <div class="new-address">
+              <div class="form-group">
+                <label for="new-street">Toppings</label>
+                <input type="text" class="form-control new-street">
+              </div>
+              <div class="form-group">
+                <label for="new-city">Crust</label>
+                <input type="text" class="form-control new-city">
+              </div>
+            </div>
+          </div>
+
+          <span class="btn btn-primary" id="add-address">Another Order</span>
+
+          <button type="submit" class="btn">Add</button>
+        </form>
+
+        <h2>Orders:</h2>
+        <ul id="contacts">
+
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <div id="show-contact">
+          <h2></h2>
+          <p>Pizza Type: <span class="first-name"></span></p>
+          <p>Size: <span class="last-name"></span></p>
+          <p>Toppings and Crust:</p>
+          <ul id="addresses">
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
   </div>
     
 </body>
