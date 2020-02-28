@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script   src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script   src="js/jquery-3.4.1.js</script"></script>
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -161,47 +161,45 @@
 
       <div class="col-md-6">
         <h2>First Order:</h2>
-        <form id="new-contact">
+        <form id="new-type">
           <div class="form-group">
-            <label for="new-first-name">Pizza Type</label>
-            <input type="text" class="form-control" id="new-first-name">
+            <label for="new-type">Pizza Type</label>
+            <input type="text" class="form-control" id="new-type">
           </div>
-          <div class="form-group">
-            <label for="new-last-name">Size</label>
-            <input type="text" class="form-control" id="new-last-name">
-          </div>
-
-          <div id="new-addresses">
-            <div class="new-address">
+          <div id="new-additions">
+            <div class="new-addition">
               <div class="form-group">
-                <label for="new-street">Toppings</label>
+                <label for="new-size">Size</label>
+                <input type="text" class="form-control" id="new-size">
+              </div>    
+              <div class="form-group">
+                <label for="new-toppings">Toppings</label>
                 <input type="text" class="form-control new-street">
               </div>
               <div class="form-group">
-                <label for="new-city">Crust</label>
+                <label for="new-crust">Crust</label>
                 <input type="text" class="form-control new-city">
               </div>
             </div>
           </div>
 
-          <span class="btn btn-primary" id="add-address">Another Order</span>
+          <span class="btn btn-primary" id="add-order">Another Order</span>
 
           <button type="submit" class="btn">Add</button>
         </form>
 
         <h2>Orders:</h2>
-        <ul id="contacts">
+        <ul id="pizza-type">
 
         </ul>
       </div>
 
       <div class="col-md-6">
-        <div id="show-contact">
+        <div id="show-type">
           <h2></h2>
-          <p>Pizza Type: <span class="first-name"></span></p>
-          <p>Size: <span class="last-name"></span></p>
+          <p>Pizza Type: <span class="pizza-type"></span></p>
           <p>Toppings and Crust:</p>
-          <ul id="addresses">
+          <ul id="additions">
 
           </ul>
         </div>
