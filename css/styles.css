@@ -36,4 +36,7 @@ body {
 
 .contact:hover {
   text-decoration: underline;
-}  
+} 
+#order-pizza {
+  color: black;
+} 
