@@ -4,10 +4,12 @@ function Order () {
   this.cost = 0;
 }
 
-function Pizza (size, toppings, selectedToppings) {
+function Pizza (size, toppings, selectedToppings, crusts, selectedCrusts) {
   this.selectSize = size;
   this.availableToppings = toppings;
   this.toppingsSelected = selectedToppings;
+  this.availableCrusts = crusts;
+  this.crustsSelected = selectedCrusts;
 }
 
 Pizza.prototype.toppingsTotal = function (availableToppings, selectedToppings) {
@@ -17,12 +19,20 @@ Pizza.prototype.toppingsTotal = function (availableToppings, selectedToppings) {
     }
   }
 }
+Pizza.prototype.crustsTotal = function (availableCrusts, selectedCrusts) {
+  for (i = 0; i < this.crustsSelected.length; i += 1) {
+    if (this.crustsSelected[i].checked) {
+      this.availableCrusts += 1;
+    }
+  }
+}
 
-Pizza.prototype.pizzaTotal = function (size, toppings) {
-  var price = this.selectSize + this.availableToppings;
+Pizza.prototype.pizzaTotal = function (size, toppings, crusts) {
+  var price = this.selectSize + this.availableToppings + this.availableCrusts;
 
   console.log(this.selectSize);
   console.log(this.availableToppings);
+  console.log(this.availableCrusts);
   return price;
 
 }
@@ -55,6 +65,17 @@ $(document).ready(function() {
                                '<div class="checkbox">' +
                                '<label><input type="checkbox" name="toppings" value="1">garlic crust</label>' +
                                '</div>' +
+                               '<h2>crusts</h2>' +
+                               '<h3>Each crust is an extra $1.00</h3>'+
+                               '<div class="checkbox">' +
+                                '<label><input type="checkbox" name="crusts" value="1">Thick crust</label>'+
+                               '</div>'+
+                               '<div class="checkbox">'+
+                                '<label><input type="checkbox" name="crusts" value="1">Thin crust</label>'+
+                               '</div>' +
+                               '<div class="checkbox">' +
+                                '<label><input type="checkbox" name="crusts" value="1">Cheese filled crust</label>' +
+                               '</div>'+
                                '</div>'
     );
   });
@@ -70,14 +91,19 @@ $(document).ready(function() {
       var sizeInput = parseInt($(this).find( $("select.pizza-size")).val());
 
       var toppingInput = 0;
+      var crustInput = 0;
 
       var ToppingsPicked = $(this).find( document.getElementsByName("toppings"));
       console.log( ToppingsPicked)
-      var newPizza = new Pizza(toppingInput, sizeInput, ToppingsPicked);
+
+      var CrustsPicked = $(this).find( document.getElementsByName("crusts"));
+      console.log( CrustsPicked)
+      var newPizza = new Pizza(toppingInput, sizeInput, ToppingsPicked, crustInput, CrustsPicked);
 
       zaaOrder.total.push(newPizza);
 
       newPizza.toppingsTotal();
+      newPizza.crustsTotal();
 
       var pizzaNumber = zaaOrder.total.indexOf(newPizza);
 
@@ -89,6 +115,6 @@ $(document).ready(function() {
 
     $("#final-total").text("Your Total Order is $" + overallTotal);
     resetSelections();
-
+  
   });
 });
