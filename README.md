@@ -1,21 +1,21 @@
-# My Portfolio
-#### This project is about me as a software developer, 09-02-2020.
+# Pizza palace
+#### This project will enable you to order pizza online, 29-03-2020.
 #### By **David Kiriago**
 ## Description
-This portfolio entails my career,education,hobbies and some of the projescts i have created over the past week.The website link is https://kidrey-david.github.io/ip/
+Using this site, you can be able to order any type of pizza with different toppings and crusts. You can order as many pizzas as you desire. Language used is HTML, CSS and JAVASCRIPT.
 ## Setup/Installation Requirements
-* I installed .git in my software.
-* I created a folder that would have my project files.
-* I coded HTML and CSS in the Visual Studio Code.
-* I created a github account and pushed my local project to the remote account in github.
-* i created a branch, pushed it to github and my project was able to be viewed online.
-My portfolio can be used using any internet app such as Chrome
+* install .git in my software.
+* create a folder that would have my project files.
+* code HTML and CSS in the Visual Studio Code.
+* creat a github account and pushed my local project to the remote account in github.
+* create a branch, pushed it to github and my project was able to be viewed online.
+Pizza Palace can be used using any internet app such as Chrome
 ## Known Bugs
 There are no known bugs
 ## Technologies Used
-The language used was HTML and CSS.
+The language used was HTML and CSS and Javascript.
 ## Support and contact details
-If there are any complications in viewing my portfolio, please contact +25474536170
+If there are any complications in viewing my portfolio, please contact +254745361702
 ### License
 *MIT License
 
