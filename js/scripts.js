@@ -83,8 +83,8 @@ $(document).ready(function() {
   $("#orderForm").submit(function(event) {
     event.preventDefault();
 
-    var zaaOrder = new Order();
-    var overallTotal = zaaOrder.cost;
+    var myOrder = new Order();
+    var overallTotal = myOrder.cost;
 
 
     $(".second-pizza").each(function() {
@@ -100,12 +100,12 @@ $(document).ready(function() {
       console.log( CrustsPicked)
       var newPizza = new Pizza(toppingInput, sizeInput, ToppingsPicked, crustInput, CrustsPicked);
 
-      zaaOrder.total.push(newPizza);
+      myOrder.total.push(newPizza);
 
       newPizza.toppingsTotal();
       newPizza.crustsTotal();
 
-      var pizzaNumber = zaaOrder.total.indexOf(newPizza);
+      var pizzaNumber = myOrder.total.indexOf(newPizza);
 
 
       $("#show-pizza-results").show();
