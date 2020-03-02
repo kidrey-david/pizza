@@ -40,4 +40,8 @@ body {
 #order-pizza {
   color: black;
 } 
-jumbo
+.jumbotron {
+  background-image: url("../image/kato.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
